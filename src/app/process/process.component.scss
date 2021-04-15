@@ -1,0 +1,108 @@
+.container-fluid {
+  color: white;
+}
+
+.discipline {
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  background-color: darkgray;
+  border-radius: 25px;
+  margin-top: 10px;
+  padding-top: 14px;
+  font-size: 17px;
+}
+
+.red {
+  background-color: #9e3737;
+}
+.blue {
+  background-color: #312f6b;
+}
+.green {
+  background-color: #24a364;
+}
+.yellow {
+  background-color: #a7b045;
+}
+.orange {
+  background-color: #cf7500;
+}
+.purple {
+  background-color: #7900cf;
+}
+.darkBlue {
+  background-color: #265d91;
+}
+
+.chosen {
+  border: 2px solid #312f6b;
+}
+
+
+.fadein div {
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.grow div {
+  transition: 1s ease;
+}
+
+.grow div:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: 1s ease;
+}
+
+.table {
+  width: 40vw;
+}
+
+.lack {
+  padding: 8px;
+  background-color: darkgray;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.bordered {
+  border: 3px solid red;
+}
+
+.noborder {
+
+}
