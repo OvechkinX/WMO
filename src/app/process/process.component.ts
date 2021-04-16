@@ -8,11 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class ProcessComponent implements OnInit {
 
   discipline: any;
-  phase: any;
+  phase: any ;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.discipline = 9;
+    this.phase = 1;
   }
 
 
@@ -68,5 +70,71 @@ export class ProcessComponent implements OnInit {
 
   environment(): any {
     this.discipline = 9;
+  }
+
+  next() {
+    if (this.discipline === 9  && this.phase === 1)
+      this.discipline = 8;
+    else if (this.discipline === 8  && this.phase === 1)
+      this.discipline = 1;
+    else if (this.discipline === 1  && this.phase === 1)
+      this.discipline = 2;
+    else if (this.discipline === 2  && this.phase === 1)
+      this.discipline = 3;
+    else if (this.discipline === 3  && this.phase === 1)
+      this.discipline = 7;
+    else if (this.discipline === 7  && this.phase === 1)
+      this.discipline = 5;
+    else if (this.discipline === 5  && this.phase === 1)
+    {
+      this.discipline = 3;
+      this.phase = 2;
+    }
+    else if (this.discipline === 3  && this.phase === 2)
+      this.discipline = 2;
+    else if (this.discipline === 2  && this.phase === 2)
+      this.discipline = 1;
+    else if (this.discipline === 1  && this.phase === 2)
+      this.discipline = 8;
+    else if (this.discipline === 8  && this.phase === 2)
+      this.discipline = 7;
+    else if (this.discipline === 7  && this.phase === 2)
+      this.discipline = 4;
+    else if (this.discipline === 4 && this.phase === 2)
+      this.discipline = 5;
+    else if (this.discipline === 5  && this.phase === 2)
+      this.discipline = 6;
+    else if (this.discipline === 6  && this.phase === 2)
+    {
+      this.discipline = 7;
+      this.phase = 3;
+    }
+    else if (this.discipline === 7  && this.phase === 3)
+      this.discipline = 1;
+    else if (this.discipline === 1  && this.phase === 3)
+      this.discipline = 4;
+    else if (this.discipline === 4  && this.phase === 3)
+      this.discipline = 5;
+    else if (this.discipline === 5  && this.phase === 3)
+      this.discipline = 9;
+    else if (this.discipline === 9  && this.phase === 3)
+      this.discipline = 8;
+    else if (this.discipline === 8  && this.phase === 3)
+    {
+      this.discipline = 9;
+      this.phase = 4;
+    }
+    else if (this.discipline === 9  && this.phase === 4)
+      this.discipline = 4;
+    else if (this.discipline === 4  && this.phase === 4)
+      this.discipline = 7;
+    else if (this.discipline === 7  && this.phase === 4)
+      this.discipline = 8;
+    else if (this.discipline === 8  && this.phase === 4)
+      this.discipline = 6;
+  }
+
+  back() {
+
   }
 }

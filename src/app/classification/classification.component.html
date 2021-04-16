@@ -1,0 +1,92 @@
+<div style="width: 100%; text-align: center; margin-top: 20px;" class="test3">
+  <button type="button" class="btn btn-primary" routerLink="/">Powrót do klas</button>
+  <br>
+  <br>
+</div>
+
+<div class="container-fluid" align="center">
+
+  <form [formGroup]="classForm" (ngSubmit)="onSubmit()">
+    <div class="formBackground">
+    <mat-form-field appearance="fill">
+      <mat-label>Wielkość projektu</mat-label>
+      <mat-select  formControlName="size">
+        <mat-option value="1">Mały</mat-option>
+        <mat-option value="2">Średni</mat-option>
+        <mat-option value="3">Duży</mat-option>
+        <mat-option value="4">Bardzo duży</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Liczebność zespołu</mat-label>
+      <mat-select  formControlName="team">
+        <mat-option value="1">1 - 5</mat-option>
+        <mat-option value="2">5 - 20</mat-option>
+        <mat-option value="3">10 - 35</mat-option>
+        <mat-option value="4">25 - 50</mat-option>
+        <mat-option value="5">40 - 80</mat-option>
+        <mat-option value="6"> > 80 </mat-option>
+      </mat-select>
+    </mat-form-field>
+  <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Czas trwania</mat-label>
+      <mat-select  formControlName="time">
+        <mat-option value="1"> < 6 msc</mat-option>
+        <mat-option value="2">6 - 12 msc</mat-option>
+        <mat-option value="3">1 - 2 lata</mat-option>
+        <mat-option value="4">2 - 3 lata</mat-option>
+        <mat-option value="5">3 - 5 lat</mat-option>
+        <mat-option value="6">5 - 10 lat</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill" >
+      <mat-label>Koszt</mat-label>
+      <mat-select formControlName="cost">
+        <mat-option value="1">Mały</mat-option>
+        <mat-option value="2">Średni</mat-option>
+        <mat-option value="3">Duży</mat-option>
+        <mat-option value="4">Bardzo duży</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill" >
+      <mat-label>Zakres zmian</mat-label>
+      <mat-select formControlName="change">
+        <mat-option value="1">Mały</mat-option>
+        <mat-option value="2">Średni</mat-option>
+        <mat-option value="3">Duży</mat-option>
+        <mat-option value="4">Bardzo duży</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill" >
+      <mat-label>Stopień skomplikowania</mat-label>
+      <mat-select formControlName="complication">
+        <mat-option value="1">Mały</mat-option>
+        <mat-option value="2">Średni</mat-option>
+        <mat-option value="3">Duży</mat-option>
+        <mat-option value="4">Bardzo duży</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill" >
+      <mat-label>Ryzyko</mat-label>
+      <mat-select formControlName="risk">
+        <mat-option value="1">Niskie</mat-option>
+        <mat-option value="2">Średne</mat-option>
+        <mat-option value="3">Wysokie</mat-option>
+        <mat-option value="4">Bardzo Wysokie</mat-option>
+      </mat-select>
+    </mat-form-field>
+      <br>
+      <button type="submit" class="btn btn-primary" (click)="getF()">Potwierdź</button>
+    </div>
+
+
+
+  </form>
+
+</div>
