@@ -12,6 +12,7 @@ export class ClassificationComponent implements OnInit {
   classForm: FormGroup;
   submitted = false;
   projectType: ProjectType;
+  cassified: number = 0;
 
   constructor( private formBuilder: FormBuilder) { }
 
@@ -52,8 +53,39 @@ export class ClassificationComponent implements OnInit {
       this.projectType.change = this.classForm.value.change;
       this.projectType.complicated = this.classForm.value.complication;
       this.projectType.risk = this.classForm.value.risk;
-      console.log(this.projectType)
+
+      console.log(this.projectType);
+      let score = this.classifyProject(this.projectType);
+
+      if(score > 7 && score < 12.5)
+        this.cassified = 1;
+      if(score >= 12.5 && score < 17)
+        this.cassified = 2;
+      if(score >= 17 && score < 21.2)
+        this.cassified = 3;
+      if(score >= 21.2 && score < 26)
+        this.cassified = 4;
+      if(score >= 26 && score < 28.7)
+        this.cassified = 5;
+      if (score >= 27.7)
+        this.cassified = 6;
     }
+
+  }
+
+  classifyProject(project: ProjectType): number {
+    let sum: number;
+    const _SIZE = 2;
+    const _TEAM = 0.5;
+    const _TIME = 1;
+    const _COST = 1.5;
+    const _CHANGE = 0.5;
+    const _COMPLICATED = 0.7;
+    const _RISK = 1.2;
+
+    sum = _SIZE * project.size + _TEAM * project.team + _TIME * project.time + _COST * project.cost + _CHANGE * project.change + _COMPLICATED * project.complicated + _RISK * project.risk;
+    console.log(sum);
+    return sum;
 
   }
 
@@ -68,4 +100,7 @@ export class ClassificationComponent implements OnInit {
 
   }
 
+  backToClass() {
+    this.cassified = 0;
+  }
 }

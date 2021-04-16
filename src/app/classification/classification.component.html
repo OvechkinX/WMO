@@ -6,7 +6,7 @@
 
 <div class="container-fluid" align="center">
 
-  <form [formGroup]="classForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="classForm" (ngSubmit)="onSubmit()" *ngIf="cassified === 0">
     <div class="formBackground">
     <mat-form-field appearance="fill">
       <mat-label>Wielkość projektu</mat-label>
@@ -85,8 +85,114 @@
       <button type="submit" class="btn btn-primary" (click)="getF()">Potwierdź</button>
     </div>
 
-
-
   </form>
+
+  <div class="test" *ngIf="cassified === 1">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="card-title">IOWA</h1>
+        <hr>
+        <p>Wielkość projektu: Mały</p>
+        <p>Liczebność zespołu: 1 - 5</p>
+        <p>Czas trwania: < 6 msc</p>
+        <p>Koszt: Bardzo mały</p>
+        <p>Zakres zmian: Bardzo Mały</p>
+        <p>Stopień skomplikowania: Bardzo Mały</p>
+        <p>Ryzyko: Niskie</p>
+        <br>
+        <button type="button" class="btn btn-primary" (click)="backToClass()">Wróć</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="test" *ngIf="cassified === 2">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="card-title">UTAH</h1>
+        <hr>
+        <p>Wielkość projektu: Mały</p>
+        <p>Liczebność zespołu: 5 - 20</p>
+        <p>Czas trwania: 6 - 12 msc</p>
+        <p>Koszt: Mały</p>
+        <p>Zakres zmian: Mały</p>
+        <p>Stopień skomplikowania: Mały</p>
+        <p>Ryzyko: Niskie</p>
+        <br>
+        <button type="button" class="btn btn-primary" (click)="backToClass()">Wróć</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="test" *ngIf="cassified === 3">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="card-title">TENNESSEE</h1>
+        <hr>
+        <p>Wielkość projektu: Średni</p>
+        <p>Liczebność zespołu: 10 - 35</p>
+        <p>Czas trwania: 1 - 2 lata</p>
+        <p>Koszt: Średni</p>
+        <p>Zakres zmian: Średni</p>
+        <p>Stopień skomplikowania: Średni</p>
+        <p>Ryzyko: Średnie</p>
+        <br>
+        <button type="button" class="btn btn-primary" (click)="backToClass()">Wróć</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="test" *ngIf="cassified === 4">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="card-title">NEVADA</h1>
+        <hr>
+        <p>Wielkość projektu: Średni</p>
+        <p>Liczebność zespołu: 25 - 50</p>
+        <p>Czas trwania: 2 - 2 lata</p>
+        <p>Koszt: Duży</p>
+        <p>Zakres zmian: Średni</p>
+        <p>Stopień skomplikowania: Duży</p>
+        <p>Ryzyko: Wysokie</p>
+        <br>
+        <button type="button" class="btn btn-primary" (click)="backToClass()">Wróć</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="test" *ngIf="cassified === 5">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="card-title">ARIZONA</h1>
+        <hr>
+        <p>Wielkość projektu: Duży</p>
+        <p>Liczebność zespołu: 40 - 80</p>
+        <p>Czas trwania: 3 - 5 lat</p>
+        <p>Koszt: Bardzo Duży</p>
+        <p>Zakres zmian: Duży</p>
+        <p>Stopień skomplikowania: Bardzo Duży</p>
+        <p>Ryzyko: Wysokie</p>
+        <br>
+        <button type="button" class="btn btn-primary" (click)="backToClass()">Wróć</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="test" *ngIf="cassified === 6">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="card-title">TEXAS</h1>
+        <hr>
+        <p>Wielkość projektu: Bardzo Duży</p>
+        <p>Liczebność zespołu: > 80</p>
+        <p>Czas trwania: 5 - 10 lat</p>
+        <p>Koszt: Bardzo Duży</p>
+        <p>Zakres zmian: Bardzo Duży</p>
+        <p>Stopień skomplikowania: Bardzo Duży</p>
+        <p>Ryzyko: Bardzo Wysokie</p>
+        <br>
+        <button type="button" class="btn btn-primary" (click)="backToClass()">Wróć</button>
+      </div>
+    </div>
+  </div>
 
 </div>
