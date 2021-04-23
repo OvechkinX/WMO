@@ -10,6 +10,7 @@ import { ClassificationComponent } from './classification/classification.compone
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {ReactiveFormsModule} from '@angular/forms';
+import { Process2Component } from './process2/process2.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     AppComponent,
     ProjectTypeComponent,
     ProcessComponent,
-    ClassificationComponent
+    ClassificationComponent,
+    Process2Component
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,1162 @@
+<button type="button" class="btn btn-primary" routerLink="/">Powrót do klas</button>
+
+<div class="container-fluid" style="margin-top: 20px;">
+
+  <div class="row">
+    <div class="col-xl-4"></div>
+    <div class="col-xl-2 fadein grow">
+      <div class="discipline darkBlue" (click)="inception()" [ngClass]="phase == 1 ? 's': 'noborder'">Inception</div>
+    </div>
+    <div class="col-xl-2 fadein grow">
+      <div class="discipline red " (click)="elaboration()" [ngClass]="phase == 2 ? 's': 'noborder'">Elaboration</div>
+    </div>
+    <div class="col-xl-2 fadein grow">
+      <div class="discipline orange" (click)="construction()" [ngClass]="phase == 3 ? 's': 'noborder'">Construction</div>
+    </div>
+    <div class="col-xl-2 fadein grow">
+      <div class="discipline green" (click)="transition()" [ngClass]="phase == 4 ? 's': 'noborder'">Transition</div>
+    </div>
+  </div>
+
+  <div class="row fadein">
+    <div class="col-xl-3">
+      <div class="row fadein grow">
+        <div class="discipline blue" (click)="businessModeling()" [ngClass]="discipline == 1 ? 's': 'noborder'">Business Modeling</div>
+      </div>
+      <div class="row fadein grow">
+        <div class="discipline blue" (click)="requirements()" [ngClass]="discipline == 2 ? 's': 'noborder'">Requirements</div>
+      </div>
+      <div class="row fadein grow">
+        <div class="discipline blue" (click)="analysis()" [ngClass]="discipline == 3 ? 's': 'noborder'">Analysis</div>
+      </div>
+      <div class="row fadein grow">
+        <div class="discipline blue" (click)="implementation()" [ngClass]="discipline == 4 ? 's': 'noborder'">Implementation</div>
+      </div>
+      <div class="row fadein grow">
+        <div class="discipline blue" (click)="test()" [ngClass]="discipline == 5 ? 's': 'noborder'">Test</div>
+      </div>
+      <div class="row fadein grow">
+        <div class="discipline blue" (click)="deployment()" [ngClass]="discipline == 6 ? 's': 'noborder'">Deployment</div>
+      </div>
+      <div class="row fadein grow">
+        <div class="discipline blue" (click)="configuration()" [ngClass]="discipline == 7 ? 's': 'noborder'">Configuration & Change Management</div>
+      </div>
+      <div class="row fadein grow">
+        <div class="discipline blue" (click)="projectManagement()" [ngClass]="discipline == 8 ? 's': 'noborder'">Project Management</div>
+      </div>
+      <div class="row fadein grow">
+        <div class="discipline blue" (click)="environment()" [ngClass]="discipline == 9 ? 's': 'noborder'">Environment</div>
+      </div>
+    </div>
+
+    <div class="col-xl-2" align="center" style="margin-top: 30vh">
+
+    </div>
+
+    <div class="col-xl-5 mt-5">
+
+      <div *ngIf="discipline == 0 && phase == 0">
+        <div class="first">
+          <h1>Wybierz dyscyplinę oraz fazę</h1>
+        </div>
+      </div>
+
+      <!-- Business Modeling -> Elaboration -->
+      <div *ngIf="discipline == 1 && phase == 1">
+        <table class="table table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Workflow</th>
+            <th scope="col">Main Role</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Assess Business Status</th>
+            <td>Bussiness Analyst</td>
+            <td>Business Vision and Goals, <br> <span class="redField">Target - Organization Assessment</span></td>
+            <td>Identify Business Goals and KPIs, <br> <span class="redField">Define Assessment and Tracebility Needs</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Identify and Describe Business Processes
+            </th>
+            <td>Business Analyst
+            </td>
+            <td>Business Use-Cases, <br> <span class="redField">Business Architecture Document</span>
+            </td>
+            <td>Find Actors and Use Cases, <br> <span class="redField">Business Architectural Analysis</span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Explore Process Automation
+            </th>
+            <td>Business Analyst
+            </td>
+            <td>Business Use-Case Model, <br> <span class="redField">Business Analysis Model</span>
+            </td>
+            <td>Prioritize Use Cases, <br> <span class="redField">Review the Business Analysis Model</span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"> <span class="redField">Design Business Process Realizations <br>and Develop a Domain Model</span>
+            </th>
+            <td>Business Analyst
+            </td>
+            <td><span class="redField">Business Use-Case Realization</span>
+            </td>
+            <td><span class="redField">Develop Business Case</span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Refine Roles and Responsibilities
+            </th>
+            <td>Business Analyst
+            </td>
+            <td>Business Entities and Business Events, <br> <span class="redField">Business Workers</span>
+            </td>
+            <td>Detail a Business Entity, <br> <span class="redField">Maintain Business Rules</span>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="discipline == 1 && phase == 2">
+        <table class="table table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Workflow</th>
+            <th scope="col">Main Role</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Assess Business Status
+            </th>
+            <td>Business Analyst</td>
+            <td>Business Vision and Goals, <br> <span class="redField">Target - Organization Assessment</span>
+            </td>
+            <td>Identify and Associate Services to Goals
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Identify and Describe Business Processes
+            </th>
+            <td>Business Analyst</td>
+            <td>Business Use-Cases, <br> <span class="redField">Business Architecture Document</span>
+            </td>
+            <td>Detail a Use Case
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Explore Process Automation
+            </th>
+            <td>Business Analyst</td>
+            <td>Business Use-Case Model, <br> <span class="redField">Business Analysis Model</span>
+            </td>
+            <td>Use-Case Design
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Design Business Process Realizations and Develop a Domain Model
+            </th>
+            <td>Business Analyst</td>
+            <td>Business Use-Case Realization
+            </td>
+            <td>Refine a Business Use-Case
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"> <span class="redField">Design Business Process Realizations <br>and Develop a Domain Model</span>
+            </th>
+            <td>Business Analyst
+            </td>
+            <td><span class="redField">Business Use-Case Realization</span>
+            </td>
+            <td><span class="redField">Refine a Business Use-Case</span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Refine Roles and Responsibilities (Find Actors)
+            </th>
+            <td>Business Analyst</td>
+            <td>Business Entities and Business Events, <br> <span class="redField">Business Workers</span>
+            </td>
+            <td>Develop Business Case
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="discipline == 1 && phase == 3">
+        <table class="table table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Workflow</th>
+            <th scope="col">Main Role</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row"><span class="redField">Identify and Describe Business processes</span>
+            </th>
+            <td>Business Analyst</td>
+            <td><span class="redField">Business Use-Cases, Business Architecture Document</span>
+            </td>
+            <td><span class="redField">Structure Use-Case Model</span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Explore Process Automation
+            </th>
+            <td>Business Analyst</td>
+            <td>Business Use-Case Model, <br> <span class="redField">Business Analysis Model</span>
+            </td>
+            <td>Structure the Use-Case Model
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="discipline == 1 && phase == 4">
+        <div class="lack">
+          <h1>Brak produktów w tej fazie</h1>
+        </div>
+      </div>
+      <div *ngIf="discipline == 2 && phase == 1">
+        <table class="table table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Workflow</th>
+            <th scope="col">Main Role</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Analyze the Problem, Understand Stakeholder Needs, Define the System, Manage the Scope of the System
+            </th>
+            <td>System Analyst</td>
+            <td>Vision, Use-Case Model, <br> <span class="redField">Software Development Plan</span>
+            </td>
+            <td>Develop Vision
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Manage Changing Requirements
+            </th>
+            <td>System Analyst</td>
+            <td>Glossary, <br> <span class="redField">StackHolder Requests</span>
+            </td>
+            <td>Capture a Common Vocabulary, <br> <span class="redField">Elicit StackHolder Requests</span>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="discipline == 2 && phase == 2">
+        <table class="table table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Workflow</th>
+            <th scope="col">Main Role</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Analyze the Problem, Understand Stakeholder Needs, Define the System
+            </th>
+            <td>System Analyst</td>
+            <td>Vision, Use-Case Model, <br> <span class="redField">Software Development Plan</span>
+            </td>
+            <td>Structure the Use-Case Model, <br> <span class="redField">Compile Software Development Plan</span>
+            </td>
+          </tr>
+
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="discipline == 2 && phase == 3">
+        <table class="table table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Workflow</th>
+            <th scope="col">Main Role</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Analyze the Problem, Understand Stakeholder Needs, Define the System
+            </th>
+            <td>System Analyst</td>
+            <td>Vision, Use-Case Model, <br> <span class="redField">Software Development Plan</span>
+            </td>
+            <td><span class="redField">Use-Case Analysis</span>
+            </td>
+          </tr>
+
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="discipline == 2 && phase == 4">
+        <table class="table table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Workflow</th>
+            <th scope="col">Main Role</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Analyze the Problem, Understand Stakeholder Needs, Define the System
+            </th>
+            <td>System Analyst</td>
+            <td>Vision, Use-Case Model, <br> <span class="redField">Software Development Plan</span>
+            </td>
+            <td><br> <span class="redField">Structure the Use-Case Model</span>
+            </td>
+          </tr>
+
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="discipline == 3 && phase == 1">
+        <table class="table table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Workflow</th>
+            <th scope="col">Main Role</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Define a Candidate ArchitectureDefine a Candidate Architecture
+            </th>
+            <td>Architect</td>
+            <td>Design Model, Use-Case Realizations, <br> <span class="redField">Software Architecture Document</span>
+            </td>
+            <td>Business Architectural Analysis
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Perform Architectural Synthesis and Analize Behavior and Refine Architecture
+            </th>
+            <td>Architect</td>
+            <td>Architectural Proof-Of-Concept, <br> <span class="redField">Reference Architecture</span>
+            </td>
+            <td>Construct Architectural Proof-of-Concept
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="discipline == 3 && phase == 2">
+        <table class="table table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Workflow</th>
+            <th scope="col">Main Role</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Define a Candidate ArchitectureDefine a Candidate Architecture
+            </th>
+            <td>Architect</td>
+            <td>Design Model, Use-Case Realizations, <br> <span class="redField">Software Architecture Document</span></td>
+            <td>Use-Case Analysis, <br> <span class="redField">Architectural Analysis</span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Perform Architectural Synthesis and Analize Behavior and Refine Architecture
+            </th>
+            <td>Architect</td>
+            <td>Architectural Proof-Of-Concept, <br> <span class="redField">Reference Architecture</span></td>
+            <td>Construct Architectural Proof-of-Concept (SOA)
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Design Components
+            </th>
+            <td>Designer</td>
+            <td>Design Classes and Interfaces, <br> <span class="redField">Data Subsystem</span></td>
+            <td>Design the User Interface, <br> <span class="redField">System Design</span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Design Database
+            </th>
+            <td>Architect</td>
+            <td>Data Model</td>
+            <td>Data Model Analysis
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="discipline == 3 && phase == 3">
+        <div class="lack">
+          <h1>Brak produktów w tej fazie</h1>
+        </div>
+      </div>
+      <div *ngIf="discipline == 3 && phase == 4">
+        <div class="lack">
+          <h1>Brak produktów w tej fazie</h1>
+        </div>
+      </div>
+      <div *ngIf="discipline == 4 && phase == 1">
+        <div class="lack">
+          <h1>Brak produktów w tej fazie</h1>
+        </div>
+      </div>
+      <div *ngIf="discipline == 4 && phase == 2">
+        <table class="table table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Workflow</th>
+            <th scope="col">Main Role</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Structure the Implementation Model
+            </th>
+            <td>Developer
+            </td>
+            <td>Design Model, Implementation Model
+            </td>
+            <td>Subsystem Design (SOA)
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="discipline == 4 && phase == 3">
+        <table class="table table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Workflow</th>
+            <th scope="col">Main Role</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row"><span class="redField">Plan the integration</span>
+            </th>
+            <td><span class="redField">Developer</span></td>
+            <td><span class="redField">Integration Build Plan</span>
+            </td>
+            <td><span class="redField">Plan Subsystem Integration</span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Implement Components
+            </th>
+            <td>Developer</td>
+            <td>Implementation Element, <br><span class="redField">Test Implementation Element</span>
+            </td>
+            <td>Implement Design Elements, <br><span class="redField">Implement Testability Elements</span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Integrate Each Subsystem
+            </th>
+            <td>Developer</td>
+            <td><span class="redField">Merge Componentes in a Subsystem</span>
+            </td>
+            <td><span class="redField">Subsystem Design, Integrate Subsystem</span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="redField">Integrate The System</span>
+            </th>
+            <td>Developer</td>
+            <td><span class="redField">Merge Subsystems</span>
+            </td>
+            <td><span class="redField">Integrate System</span>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="discipline == 4 && phase == 4">
+        <table class="table table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Workflow</th>
+            <th scope="col">Main Role</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Implement Components
+            </th>
+            <td>Developer</td>
+            <td>Implementation Element, <br><span class="redField">Test Implementation Element</span>
+            </td>
+            <td>Review the Design
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="discipline == 5 && phase == 1">
+        <table class="table table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Workflow</th>
+            <th scope="col">Main Role</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Define Evaluation Mission</th>
+            <td>Tester</td>
+            <td>Test Plan, Test Strategy
+            </td>
+            <td>Identify Targets of Test
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="discipline == 5 && phase == 2">
+        <table class="table table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Workflow</th>
+            <th scope="col">Main Role</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Define Evaluation Mission
+            </th>
+            <td>Tester</td>
+            <td>Test Plan, Test Strategy
+            </td>
+            <td>Define Test Details
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="redField">Verify Test Approach</span>
+            </th>
+            <td>Tester</td>
+            <td><span class="redField">Test Ideas List, Test Interface Specification</span>
+            </td>
+            <td><span class="redField">Identify Test Ideas</span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Test and EvaluateDesign Database
+            </th>
+            <td>Tester</td>
+            <td>Test Environment Configuration, <br><span class="redField">Test Interface Specification, TestCase</span>
+            </td>
+            <td>Structure the Test Implementation
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="discipline == 5 && phase == 3">
+        <table class="table table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Workflow</th>
+            <th scope="col">Main Role</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Define Evaluation Mission
+            </th>
+            <td>Tester</td>
+            <td>Test Plan, Test Strategy
+            </td>
+            <td>Implement Developer Test
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Verify Test Approach
+            </th>
+            <td>Tester</td>
+            <td>Test Interface Specification, <br> <span class="redField">Test Ideas List</span>
+            </td>
+            <td>Implement Test, <br> <span class="redField">Implement Test Suite</span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Test and EvaluateDesign Database
+            </th>
+            <td>Tester</td>
+            <td>Test Environment Configuration, <br> <span class="redField">Test Interface Specification, Test Case</span>
+            </td>
+            <td>Execute Developer Tests
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="discipline == 5 && phase == 4">
+        <div class="lack">
+          <h1>Brak produktów w tej fazie</h1>
+        </div>
+      </div>
+      <div *ngIf="discipline == 6 && phase == 1">
+        <div class="lack">
+          <h1>Brak produktów w tej fazie</h1>
+        </div>
+      </div>
+      <div *ngIf="discipline == 6 && phase == 2">
+        <table class="table table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Workflow</th>
+            <th scope="col">Main Role</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Plan Deployment
+            </th>
+            <td>Deployment Manager
+            </td>
+            <td>Deployment Plan, <br> <span class="redField">Product Acceptance Plan</span>
+            </td>
+            <td>Develop Deployment Plan
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="discipline == 6 && phase == 3">
+        <table class="table table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Workflow</th>
+            <th scope="col">Main Role</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Plan Deployment
+            </th>
+            <td>Deployment Manager
+            </td>
+            <td>Deployment Plan, <br> <span class="redField">Product Acceptance Plan</span>
+            </td>
+            <td>Iteration Acceptance Review
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Develop Support Material
+            </th>
+            <td>Technical Writer
+            </td>
+            <td>Traning Materials, <br> <span class="redField">End-User Support Material</span>
+            </td>
+            <td><span class="redField">Develop Support Materials</span>
+            </td>
+          </tr>
+         <!-- <tr>
+            <th scope="row">Manage Acceptance Test
+            </th>
+            <td>Deployment Manager
+            </td>
+            <td>Deployment Plan
+            </td>
+            <td>Create Deployment Unit
+            </td>
+          </tr> -->
+          <tr>
+            <th scope="row"><span class="redField">Produce Deployment Unit</span>
+            </th>
+            <td><span class="redField">Developer</span>
+            </td>
+            <td><span class="redField">Build, Training Materials</span>
+            </td>
+            <td><span class="redField">Create Deployment Unit, Develop Support Materials</span>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="discipline == 6 && phase == 4">
+        <table class="table table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Workflow</th>
+            <th scope="col">Main Role</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row"><span class="redField">Deploy Support Material</span>
+            </th>
+            <td><span class="redField">Technical Writer</span>
+            </td>
+            <td><span class="redField">Traning Materials, End-User Support Material</span>
+            </td>
+            <td><span class="redField">Develop Installation Work Products</span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="redField">Produce Deployment Unit</span>
+            </th>
+            <td><span class="redField">Developer</span>
+            </td>
+            <td><span class="redField">Traning Materials, Build</span>
+            </td>
+            <td><span class="redField">Develop Installation Work Products</span>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="discipline == 7 && phase == 1">
+        <table class="table table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Workflow</th>
+            <th scope="col">Main Role</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Plan Project Configuration & Change Control
+            </th>
+            <td>CM Manager
+            </td>
+            <td>Configuration Management Plan
+            </td>
+            <td>Set Up Configuration Management (CM) Environment
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="redField">Change and Deliver Configuration Items</span>
+            </th>
+            <td><span class="redField">Team Member</span>
+            </td>
+            <td><span class="redField">Work order, WorkSpace</span>
+            </td>
+            <td><span class="redField">Create Integration Workspaces</span>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="discipline == 7 && phase == 2">
+        <table class="table table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Workflow</th>
+            <th scope="col">Main Role</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Plan Project Configuration & Change Control
+            </th>
+            <td>CM Manager
+            </td>
+            <td>Configuration Management Plan
+            </td>
+            <td>Write Configuration Management (CM) Plan
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="redField">Change and Deliver Configuration Items</span>
+            </th>
+            <td><span class="redField">Team Member</span>
+            </td>
+            <td><span class="redField">Work order, WorkSpace</span>
+            </td>
+            <td><span class="redField">Create Development Workspaces</span>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="discipline == 7 && phase == 3">
+        <table class="table table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Workflow</th>
+            <th scope="col">Main Role</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Plan Project Configuration & Change Control
+            </th>
+            <td>CM Manager
+            </td>
+            <td>Configuration Management Plan
+            </td>
+            <td>Report on Configuration Status
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Change and Deliver Configuration Items
+            </th>
+            <td>Team Member
+            </td>
+            <td>Work Order, <br> <span class="redField">Workspace</span>
+            </td>
+            <td>Verify Tool Configuration and Installation, <br> <span class="redField">Update Workspace</span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="redField">Manage Baselines & Releases</span>
+            </th>
+            <td><span class="redField">CM Manager</span>
+            </td>
+            <td><span class="redField">Repository</span>
+            </td>
+            <td><span class="redField">Create Baselines</span>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="discipline == 7 && phase == 4">
+        <table class="table table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Workflow</th>
+            <th scope="col">Main Role</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Plan Project Configuration & Change Control
+            </th>
+            <td>CM Manager
+            </td>
+            <td>Configuration Management Plan
+            </td>
+            <td>Perform Configuration Audit
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="redField">Manage Baselines & Releases</span>
+            </th>
+            <td><span class="redField">CM Manager</span>
+            </td>
+            <td><span class="redField">Repository</span>
+            </td>
+            <td><span class="redField">Promote Baselines</span>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="discipline == 8 && phase == 1">
+        <table class="table table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Workflow</th>
+            <th scope="col">Main Role</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Conceive New Project
+            </th>
+            <td>Project Manager</td>
+            <td>Vision (Initial), <br> <span class="redField">Iteration Plan (Inception Phase)</span>
+            </td>
+            <td>Initiate Project
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Plan For Next Iteration
+            </th>
+            <td>Project Manager</td>
+            <td>Risk List, <br> <span class="redField">Iteration Plan</span></td>
+            <td>Identify and Assess Risks, <br> <span class="redField">Initiate Iteration</span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Manage Iteration
+            </th>
+            <td>Project Manager</td>
+            <td>Vision, Risk List, <br> <span class="redField">Software Deployment Plan (First draft)</span>
+            </td>
+            <td>Develop Risk Management Plan</td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="redField">Close-Out Phase and Close-out Project</span>
+            </th>
+            <td>Project Manager</td>
+            <td><span class="redField">Iteration Assessment, Issues List</span>
+            </td>
+            <td><span class="redField">Assess Iteration</span></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="discipline == 8 && phase == 2">
+        <table class="table table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Workflow</th>
+            <th scope="col">Main Role</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Plan For Next Iteration
+            </th>
+            <td>Project Manager</td>
+            <td>Risk List, <br> <span class="redField">Iteration Plan</span></td>
+            <td>Identify and Assess Risks, <br> <span class="redField">Develop Iteration Plan</span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Manage Iteration
+            </th>
+            <td>Project Manager</td>
+            <td>Vision, Risk List, <br> <span class="redField">Software Deployment Plan (First draft)</span>
+            </td>
+            <td>Develop Risk Management Plan</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="discipline == 8 && phase == 3">
+        <table class="table table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Workflow</th>
+            <th scope="col">Main Role</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Plan For Next Iteration
+            </th>
+            <td>Project Manager</td>
+            <td>Risk List, <br> <span class="redField">Iteration Plan</span></td>
+            <td>Identify and Assess Risks
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Manage Iteration
+            </th>
+            <td>Project Manager</td>
+            <td>Vision, Risk List, <br> <span class="redField">Software Deployment Plan (First draft)</span>
+            </td>
+            <td>Assess Iteration, <br> <span class="redField">Develop Iteration Plan</span>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="discipline == 8 && phase == 4">
+        <table class="table table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Workflow</th>
+            <th scope="col">Main Role</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Plan For Next Iteration
+            </th>
+            <td>Project Manager</td>
+            <td>Risk List, <br> <span class="redField">Iteration Plan</span></td>
+            <td>Iteration Plan Review
+
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Manage Iteration
+            </th>
+            <td>Project Manager</td>
+            <td>Vision, Risk List, <br> <span class="redField">Software Deployment Plan (First draft)</span>
+            </td>
+            <td>Iteration Acceptance Review
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Close-Out Phase and Close-Out Project
+            </th>
+            <td>Project Manager</td>
+            <td>Issues List, <br> <span class="redField">Iteration Assessment</span>
+            </td>
+            <td>Project Acceptance Review
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="discipline == 9 && phase == 1">
+        <table class="table table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Workflow</th>
+            <th scope="col">Main Role</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Prepare Environment for Project
+            </th>
+            <td>Process Engineer</td>
+            <td>Development Process, <br> <span class="redField">Development Case</span>
+            </td>
+            <td>Launch Development Process
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Prepare Environment for an Iteration
+            </th>
+            <td>Process Engineer</td>
+            <td>Tools, <br> <span class="redField">Development Case</span>
+            </td>
+            <td>Select and Acquire Tools, Verify Tool Configuration and Installation
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="discipline == 9 && phase == 2">
+        <table class="table table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Workflow</th>
+            <th scope="col">Main Role</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Prepare Environment for Project
+            </th>
+            <td>Process Engineer</td>
+            <td>Development Process, <br> <span class="redField">Development Case</span>
+            </td>
+            <td><span class="redField">Develop Deployment Case</span>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="discipline == 9 && phase == 3">
+        <table class="table table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Workflow</th>
+            <th scope="col">Main Role</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Prepare Environment for Project
+            </th>
+            <td>Process Engineer</td>
+            <td>Development Process, <br> <span class="redField">Development Case</span>
+            </td>
+            <td><span class="redField">Set up Tools</span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Prepare Environment for an Iteration
+            </th>
+            <td>Process Engineer</td>
+            <td>Tools, <br> <span class="redField">Development Case</span>
+            </td>
+            <td><span class="redField">Verify Tool Configuration and Instalation</span>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="discipline == 9 && phase == 4">
+        <table class="table table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Workflow</th>
+            <th scope="col">Main Role</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Prepare Environment for Project
+            </th>
+            <td>Process Engineer</td>
+            <td>Development Process, <br> <span class="redField">Development Case</span>
+            </td>
+            <td>Prepare for Project Close-Out
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-xl-2" align="center" style="margin-top: 30vh">
+      <button type="button" class="btn btn-primary" (click)="next()" >NEXT</button>
+    </div>
+  </div>
+
+</div>
